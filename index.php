@@ -5,7 +5,7 @@ $payload = preg_replace('/:\s*(\-?\d+(\.\d+)?([e|E][\-|\+]\d+)?)/', ': "$1"', $p
 $webhook = json_decode($payload);
 
 $invoked = $webhook->invoked;
-$secret = "RJmyrMQeGz3Ok58/iRKJi9phQp2TJHPdfI0XEMq+w6c"; // SIGNATURE
+$secret = "RJmyrMQeGz3Ok58/iRKJi9phQp2TJHPdfI0XEMq+w6c="; // SIGNATURE
 
 $signature = hash('sha256',  $invoked.":".$secret);
 
