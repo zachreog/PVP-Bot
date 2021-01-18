@@ -27,7 +27,7 @@ if(strcmp($signature, $webhook->signature) == 0) {
 
 function postToDiscord($message)
 {
-    $json_data = json_encode(["content" => $message, "username" => "German Survival Camp"]); //CHANGE NAME OF BOT
+    $json_data = json_encode(["content" => $message, "username" => "KillFeed"]); //CHANGE NAME OF BOT
 	$ch = curl_init("https://discord.com/api/webhooks/800531440860135444/H8VjEXVj5MJ4sq3YZUeTXy-_w5otsmaEae_8wKlwNjN2G39N0h5-UUQepNMEsUxxNBT3"); //DISCORD URL
 	curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
 	curl_setopt( $ch, CURLOPT_POST, 1);
